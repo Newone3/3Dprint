@@ -1,3 +1,11 @@
+bcrypt==3.1.4
+certifi==2018.4.16
+cffi==1.11.5
 Django==1.9
-Pillow==3.1.0
-wheel==0.24.0
+django-crispy-forms==1.7.2
+django-markdown-deux==1.0.5
+django-pagedown==1.0.5
+markdown2==2.3.1
+Pillow==5.2.0
+pycparser==2.18
+six==1.11.0
