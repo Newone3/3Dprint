@@ -1,0 +1,105 @@
+git init
+git add .  /git add README.md /prida vse
+git commit -m "first commit"
+git remote add origin https://github.com/Newone3/django-deployment.git
+git push -u origin master
+
+
+aktualizace githubu:
+git add .                   ///nezapomenout na tecku xD
+git commit -m "aktualizace"
+git push -u origin master
+
+
+newone3
+E-14
+
+pythonanywhere : same los.haldos
+
+mkvirtualenv --python=python3.6 myproj
+pip list
+
+zjisteni verze djanga v terminalu
+python
+import django
+django.__version__
+
+v bash
+pip install -U django==1.10.5
+
+kontrola:
+(myproj) 19:43 ~ $ which django-admin.py
+/home/newone/.virtualenvs/myproj/bin/django-admin.py
+
+git clone https://github.com/Newone3/django-deployment.git
+
+myproj) 19:46 ~ $ ls
+README.txt  django-deployment  my-first-blog
+(myproj) 19:46 ~ $ cd django-deployment/
+(myproj) 19:46 ~/django-deployment (master)$ ls
+help.txt  learning_users
+(myproj) 19:46 ~/django-deployment (master)$ cd learning_users/
+
+pip install bcrypt
+pip install django[argon2]
+
+python manage.py migrate
+
+pip install django-bootstrap3
+pip install django-braces
+pip install misaka
+pip install django==1.11
+
+ALLOWED_HOSTS = ['newone.pythonanywhere.com']  tohle dat do settings
+DEBUG = False
+
+CORS_REPLACE_HTTPS_REFERER      = True
+HOST_SCHEME                     = "https://"
+SECURE_PROXY_SSL_HEADER         = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT             = True
+SESSION_COOKIE_SECURE           = True
+CSRF_COOKIE_SECURE              = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
+SECURE_HSTS_SECONDS             = 1000000
+SECURE_FRAME_DENY               = True
+
+
+
+
+(myproj) 20:04 ~/big_project2/social (master)$ git config --global user.name "newone3"
+(myproj) 07:05 ~/big_project2/social (master)$ git config --global user.email "los.haldos@seznam.cz"
+
+nastaveni Env 
+workon myDjangoEnv
+
+Commitni a hoď svůj kód na GitHub
+$ git status
+$ git add --all .
+$ git status
+$ git commit -m "komentar"
+$ git push
+
+Pak v Bash konzoli PythonAnywhere:
+$ cd my-first-blog
+$ source myproj/bin/activate
+git add .
+git stash
+git pull
+[...]
+(myvenv)$ python manage.py collectstatic
+[...]
+
+nevim proc ale uz staci jen
+cd big_project2/
+git pull
+
+
+
+Run pip freeze > requirements.txt on the remote machine
+
+Copy that requirements.txt file to your local machine
+
+In your local virtual environment, run pip install -r requirements.txt
+
+
+

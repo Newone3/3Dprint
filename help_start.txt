@@ -1,0 +1,58 @@
+conda info --envs
+conda env remove --name myDjangoEnv
+conda create --name myDjangoEnv django
+
+To activate this environment, use:
+source activate myDjangoEnv
+
+To deactivate an active environment, use:
+source deactivate
+
+instalace do envu (muzu zmenit verzi)
+ conda install django=1.10
+ pip install django
+
+ verze djanga:
+
+ python
+ import django
+print(django.get_version())
+quit()
+
+vytvorit projekt:
+django-admin startproject first_project
+
+spustit server:
+python manage.py runserver
+konec:
+ctrl+c
+http://127.0.0.1:8000
+
+
+python manage.py startapp first_app  //vytvori soubory views atd
+python manage.py startapp ProTwo
+
+
+1) pridat do settings aplikaci
+2) vytvorit views a url
+3) slozku pro templaty
+4)vytvorit modely:
+python manage.py migrate
+python manage.py makemigrations first_app
+python manage.py migrate
+
+python manage.py shell
+
+python manage.py createsuperuser
+
+pip install Faker
+
+pip install django-bootstrap3
+pip install django-braces
+pip install misaka
+
+
+conda create --name myclone --clone myenv
+NOTE: Replace myclone with the name of the new environment. Replace myenv with the name of the existing environment that you want to copy.
+
+conda info --envs
