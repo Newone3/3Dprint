@@ -69,7 +69,7 @@ SECURE_FRAME_DENY               = True
 (myproj) 20:04 ~/big_project2/social (master)$ git config --global user.name "newone3"
 (myproj) 07:05 ~/big_project2/social (master)$ git config --global user.email "los.haldos@seznam.cz"
 
-nastaveni Env 
+nastaveni Env
 workon myDjangoEnv
 
 Commitni a hoď svůj kód na GitHub
@@ -102,4 +102,4 @@ Copy that requirements.txt file to your local machine
 In your local virtual environment, run pip install -r requirements.txt
 
 
-
+ssh -p 20022 kubasek@89.102.14.70

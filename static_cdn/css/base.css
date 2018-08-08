@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
 h1 {
     color: #777777;
 }
@@ -8,22 +9,112 @@ h1 {
 }
 
 
-nav .logo {
+.navbaros1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 10px 100px;
+  box-sizing: border-box;
+  transition: .5s;
+  z-index: 9;
+}
+
+.logo {
   float: left;
+}
+
+.imgur {
+  height: 90px;
+  transition: .5s;
 
 }
 
-.yolo{
+.ulos {
+  float: right;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  display: flex;
 }
 
-.navbar1{
-  position: fixed ;
-  top: 0 ;
-  left: 0 ;
-  width: 100% ;
-  height: 100px ;
-  padding: 500px 500px ;
+.lios {
+  list-style: none;
+}
+
+.aos {
+  line-height: 80px;
+  color: #262626;
+  padding: 5px 20px;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:  .5s;
+}
+
+
+.change:hover{
+  color: #fff;
+  background: #f00;
+  text-decoration: none;
+
+}
+
+
+.active{
+  color: #fff;
+  background: #f00;
+  text-decoration: none;
+
+}
+
+.sec1{
+  width: 100%;
+  height: 50vh;
+  background: url(https://www.vieodesign.com/hubfs/blog_images/5-examples-parallax-websites.jpg );
+  background-size: cover;
+  background-size: 100% 300px;
+  background-repeat: no-repeat;
+}
+
+.sec2{
+  width: 100%;
+  height: 50vh;
+  background: url(https://www.americanelements.com/sites/public/files/images/headers/3d-printing-banner.jpg);
+  background-size: cover;
+  background-size: 100% 300px;
+  background-repeat: no-repeat;
+}
+
+.content{
+  padding: 50px;
+}
+
+.h11{
+  margin: 0 ;
+  padding: 0 ;
+  font-size: 2em ;
+  color: #000000;
+
+}
+
+.p11{
+  margin: 20px 0 0;
+  padding: 0;
+  font-size: 1.1em;
+}
+
+.black{
+  background: rgba(0,0,0,.8) !important;
+  height: 110px;
+  padding: 10px 50px;
+}
+
+nav.black .logo img{
+  height: 80px;
+}
+
+nav.black ul li a{
+  color: #fff;
+  line-height: 90px;
 }

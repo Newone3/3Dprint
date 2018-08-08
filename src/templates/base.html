@@ -2,6 +2,7 @@
 <!--DOCTYPE html -->
 <html>
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
 <title>{% block head_title %}3D Tisk{% endblock head_title %}</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -19,7 +20,11 @@
       else {
         $('nav').removeClass('black');
       }
-
+  })
+  $(document).ready(function(){
+    $(".menu h4").click(function(){
+      $("nav ul").toggleClass("active")
+    })
   })
 </script>
 
@@ -31,6 +36,9 @@
 {% block head_extra %} {% endblock head_extra %}
 </head>
 <body>
+
+
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
 var js, fjs = d.getElementsByTagName(s)[0];
@@ -43,13 +51,24 @@ fjs.parentNode.insertBefore(js, fjs);
 
 
 {% include "messages_display.html" %}
+<div class="responsive-bar">
+  <div class="logo">
+    <img class="imgur" src="https://d2rormqr1qwzpz.cloudfront.net/photos/2014/04/02/55-59665-tags_promo-1396460627.jpg" width="100px" height="100px" alt="not found">
+  </div>
+  <div class="menu">
+    <h4>Menu</h4>
+
+
+  </div>
+
+</div>
 
 <nav class="navbaros1">
   <div class="logo">
     <img class="imgur" src="https://d2rormqr1qwzpz.cloudfront.net/photos/2014/04/02/55-59665-tags_promo-1396460627.jpg" width="100px" height="100px" alt="not found">
   </div>
   <ul class="ulos">
-    <li class="lios"><a class="aos active" href="#">Home</a></li>
+    <li class="lios"><a class="aos change redcol" href="#">Home</a></li>
     <li class="lios"><a class="aos change" href="#">About</a></li>
     <li class="lios"><a class="aos change" href="#">Services</a></li>
     <li class="lios"><a class="aos change" href="#">Team</a></li>
