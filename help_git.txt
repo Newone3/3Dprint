@@ -103,3 +103,15 @@ In your local virtual environment, run pip install -r requirements.txt
 
 
 ssh -p 20022 kubasek@89.102.14.70
+
+
+kubasek@rpi-devel:~ $ cd
+.cache/     .local/     miniconda3/ projects/   web/
+kubasek@rpi-devel:~ $ cd projects/django-rpi/
+raspberrypiapp/ venv/
+kubasek@rpi-devel:~ $ cd projects/django-rpi/
+raspberrypiapp/ venv/
+kubasek@rpi-devel:~ $ cd projects/django-rpi/
+kubasek@rpi-devel:~/projects/django-rpi $ source venv/bin/activate
+
+(venv) kubasek@rpi-devel:~/projects/django-rpi $ pip list

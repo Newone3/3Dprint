@@ -1,0 +1,36 @@
+POSTUP:
+#git clone https://github.com/Newone3/3Dprint.git
+# poprve vytvoreni vlastniho virtualenv
+virtualenv venv2
+source venv2/bin/activate
+pip install django
+django-admin startproject django2
+cd ~/django2
+
+#uprava poslouchani portu
+vim django2/settings.py
+ALLOWED_HOSTS = ["localhost","192.168.2.115","89.102.14.70"]
+
+python manage.py migrate
+python manage.py runserver 0.0.0.0:9000
+
+opusteni virtualenv:
+deactivate
+
+webovka:
+http://raspberrypituts.com/raspberry-pi-django-tutorial-2017/
+
+Az to spustis tak na adrese uz bezi web:
+http://89.102.14.70:9000
+
+
+Kuba:
+virtualenv POC
+source POC/bin/activate
+
+apt-cache show python3-pil
+
+
+￼<22:40:02> "Wasmanni": http://89.102.14.70:9000/
+￼<22:42:45> "Wasmanni": apt-get install python3-pil.imagetk
+￼<22:44:28> "Wasmanni": cesta /home/pi/3Dprint/src
