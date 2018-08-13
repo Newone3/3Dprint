@@ -34,3 +34,5 @@ apt-cache show python3-pil
 ￼<22:40:02> "Wasmanni": http://89.102.14.70:9000/
 ￼<22:42:45> "Wasmanni": apt-get install python3-pil.imagetk
 ￼<22:44:28> "Wasmanni": cesta /home/pi/3Dprint/src
+
+ssh -p 20022 kubasek@89.102.14.70
