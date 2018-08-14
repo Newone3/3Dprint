@@ -19,6 +19,10 @@ from .forms import PostForm
 from .models import Post
 from .utils import get_read_time
 
+from django.views.generic import (TemplateView,ListView,
+                                    DetailView,CreateView,
+                                    UpdateView,DeleteView)
+
 def post_create(request):
 	if not request.user.is_staff or not request.user.is_superuser:
 		raise Http404
@@ -43,7 +47,7 @@ def post_detail(request, slug=None):
 			raise Http404
 	share_string = quote_plus(instance.content)
 
-    
+
     # print(get_read_time(instance.get_markdown()))
 	context = {
 		"title": instance.title,
@@ -118,3 +122,18 @@ def post_delete(request, slug=None):
 	instance.delete()
 	messages.success(request, "Successfully deleted")
 	return redirect("posts:list")
+
+class AboutView(TemplateView):
+    template_name = 'about.html'
+
+class ContactView(TemplateView):
+    template_name = 'contact.html'
+
+class PricesView(TemplateView):
+    template_name = 'prices.html'
+
+class ServicesView(TemplateView):
+    template_name = 'services.html'
+
+class TeamView(TemplateView):
+    template_name = 'team.html'

@@ -119,3 +119,21 @@ kubasek@rpi-devel:~/projects/django-rpi $ source venv/bin/activate
 
 pip install django-sslserver
 python manage.py runsslserver --certificate /path/to/certificate.crt --key /path/to/key.key
+
+
+prihlaseni do rpi
+ssh -p 20022 kubasek@89.102.14.70
+
+spusteni serveru na pozadi
+another easy way to do this is to run:
+
+[user@host]$screen
+[user@host]$python manage.py runserver 0.0.0.0:8000
+Now press Ctrl+A and then press d to exit from this screen.
+
+This creates the server in a screen and then detaches it. This way you can simply go back in and type:
+
+[user@host]$screen -r
+and you can take control of the server again and see whats going on.
+
+screen python3 manage.py runsslserver 0.0.0.0:9000

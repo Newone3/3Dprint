@@ -72,11 +72,11 @@ fjs.parentNode.insertBefore(js, fjs);
   </div>
   <ul class="ulos">
     <li class="lios"><a class="aos change redcol" href="{% url "posts:list" %}">Home</a></li>
-    <li class="lios"><a class="aos change" href="{% url "posts:list" %}">O nás</a></li>
-    <li class="lios"><a class="aos change" href="{% url "posts:list" %}">Služby</a></li>
-    <li class="lios"><a class="aos change" href="{% url "posts:list" %}">Team</a></li>
-    <li class="lios"><a class="aos change" href="{% url "posts:list" %}">Ceník</a></li>
-    <li class="lios"><a class="aos change" href="{% url "posts:list" %}">Kontakt</a></li>
+    <li class="lios"><a class="aos change" href="{% url "posts:about" %}">O nás</a></li>
+    <li class="lios"><a class="aos change" href="{% url "posts:services" %}">Služby</a></li>
+    <li class="lios"><a class="aos change" href="{% url "posts:team" %}">Team</a></li>
+    <li class="lios"><a class="aos change" href="{% url "posts:prices" %}">Ceník</a></li>
+    <li class="lios"><a class="aos change" href="{% url "posts:contact" %}">Kontakt</a></li>
     {% if not request.user.is_authenticated %}
     <li class="lios"><a class="aos change" href="{% url "login" %}">Login</a></li>
     <li class="lios"><a class="aos change" href="{% url "register" %}">Register</a></li>
@@ -102,16 +102,16 @@ fjs.parentNode.insertBefore(js, fjs);
             <div class="col-sm-3">
                 <h5>Get started</h5>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Sign up</a></li>
+                    <li><a href="{% url "posts:list" %}">Home</a></li>
+                    <li><a href="{% url "register" %}">Sign up</a></li>
                     <li><a href="#">Downloads</a></li>
                 </ul>
             </div>
             <div class="col-sm-3">
                 <h5>About us</h5>
                 <ul>
-                    <li><a href="#">Company Information</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="{% url "posts:about" %}">Company Information</a></li>
+                    <li><a href="{% url "posts:contact" %}">Contact us</a></li>
                     <li><a href="#">Reviews</a></li>
                 </ul>
             </div>
@@ -144,7 +144,7 @@ fjs.parentNode.insertBefore(js, fjs);
         <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
     </div>
     <div class="footer-copyright">
-        <p>© 2016 Copyright Text </p>
+        <p>© 2018 Všechna práva vyhrazena </p>
     </div>
 </footer>
 
