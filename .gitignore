@@ -60,3 +60,8 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#databaze
+src/db.sqlite3
+db.sqlite3
+*.sqlite.3

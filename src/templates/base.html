@@ -7,14 +7,20 @@
 <title>{% block head_title %}3D Tisk{% endblock head_title %}</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+<link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
+<link rel='stylesheet' href='header.css ' />
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-<script type="text/javascript">
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<!-- <script type="text/javascript">
   $(window).on('scroll',function(){
     if($(window).scrollTop()){
       $('nav').addClass('black');
@@ -28,10 +34,12 @@
       $("nav ul").toggleClass("active")
     })
   })
-</script>
+</script> -->
 
 <link rel='stylesheet' href='{% static "css/base.css" %}' />
 <link rel='stylesheet' href='{% static "css/Footer-with-map.css" %}' />
+<link rel='stylesheet' href='{% static "css/header.css" %} ' />
+<link rel='stylesheet' href='{% static "css/footer.css" %} ' />
 <style>
 {% block style %}{% endblock style %}
 </style>
@@ -39,6 +47,51 @@
 {% block head_extra %} {% endblock head_extra %}
 </head>
 <body>
+
+
+  <header class="main_h">
+
+  <div class="row">
+      <a class="logo" href="#">EVIL Corp</a>
+
+      <div class="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+      <nav>
+          <ul>
+
+              <li><a href="{% url "posts:list" %}">NEWS</a></li>
+              <li><a href="{% url "posts:about" %}">O nás</a></li>
+              <li><a href="{% url "posts:services" %}">Služby</a></li>
+              <li><a href=".footer">Kontakty</a></li>
+              {% if not request.user.is_authenticated %}
+              <li><a href="{% url "login" %}">Login</a></li>
+              <li><a href="{% url "register" %}">Register</a></li>
+              {% else %}
+              <li><a href="{% url "posts:create" %}">New Post</a></li>
+              <li><a href="{% url "logout" %}">Logout</a></li>
+              {% endif %}
+          </ul>
+      </nav>
+
+  </div> <!-- / row -->
+
+  </header>
+
+  <div class="hero">
+
+  <h1><span>EVIL Corp</span><br>3D Printing</h1>
+
+  <div class="mouse">
+      <span></span>
+  </div>
+
+  </div>
+
+
 
 
 
@@ -54,6 +107,7 @@ fjs.parentNode.insertBefore(js, fjs);
 
 
 {% include "messages_display.html" %}
+<!--
 <div class="responsive-bar">
   <div class="logo">
     <img class="imgur" src="https://d2rormqr1qwzpz.cloudfront.net/photos/2014/04/02/55-59665-tags_promo-1396460627.jpg" width="100px" height="100px" alt="not found">
@@ -85,6 +139,7 @@ fjs.parentNode.insertBefore(js, fjs);
     {% endif %}
   </ul>
 </nav>
+-->
 <section class="sec1"></section>
 
 <section class="odsazeni">
@@ -96,41 +151,59 @@ fjs.parentNode.insertBefore(js, fjs);
 
 
 
-<footer id="myFooter">
-    <div class="">
-        <div class="row">
-            <div class="col-sm-3">
-                <h5>Get started</h5>
-                <ul>
-                    <li><a href="{% url "posts:list" %}">Home</a></li>
-                    <li><a href="{% url "register" %}">Sign up</a></li>
-                    <li><a href="#">Downloads</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-3">
-                <h5>About us</h5>
-                <ul>
-                    <li><a href="{% url "posts:about" %}">Company Information</a></li>
-                    <li><a href="{% url "posts:contact" %}">Contact us</a></li>
-                    <li><a href="#">Reviews</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-3">
-                <h5>Support</h5>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Help desk</a></li>
-                    <li><a href="#">Forums</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-3">
-                <h5>Legal</h5>
-                <ul>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
+<footer id="myFooter" class="footer footer-distributed">
+
+    <div class="footer-padding">
+
+
+        <div class="footer-left">
+
+          <h3>Evil<span>Corp</span></h3>
+
+          <p class="footer-links">
+            <a href="{% url "posts:list" %}">Home</a>
+            ·
+            <a href="{% url "posts:list" %}">Blog</a>
+            ·
+            <a href="{% url "posts:services" %}">Pricing</a>
+            ·
+            <a href="{% url "posts:about" %}">About</a>
+            ·
+            <a href="{% url "posts:contact" %}">Contact</a>
+          </p>
+
+          <p class="footer-company-name">Evil Corp &copy; 2018</p>
+        </div>
+
+        <div class="footer-center">
+
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Za Humny 333</span> Liberec, Česká republika</p>
+          </div>
+
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+420 731 432 521</p>
+          </div>
+
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@evilcorp.com">support@evilcorp.com</a></p>
+          </div>
+
+        </div>
+
+        <div class="footer-right">
+
+          <p class="footer-company-about">
+            <span>About the company</span>
+            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+          </p>
+
+
+
+        </div>
         </div>
         <!-- Here we use the Google Embed API to show Google Maps. -->
         <!-- In order for this to work in your project you will need to generate a unique API key.  -->
@@ -211,6 +284,45 @@ $(document).ready(function(){
 
 })
 
+</script>
+
+<script type="text/javascript">
+// Sticky Header
+$(window).scroll(function() {
+
+  if ($(window).scrollTop() > 100) {
+      $('.main_h').addClass('sticky');
+  } else {
+      $('.main_h').removeClass('sticky');
+  }
+});
+
+// Mobile Navigation
+$('.mobile-toggle').click(function() {
+  if ($('.main_h').hasClass('open-nav')) {
+      $('.main_h').removeClass('open-nav');
+  } else {
+      $('.main_h').addClass('open-nav');
+  }
+});
+
+$('.main_h li a').click(function() {
+  if ($('.main_h').hasClass('open-nav')) {
+      $('.navigation').removeClass('open-nav');
+      $('.main_h').removeClass('open-nav');
+  }
+});
+
+// navigation scroll lijepo radi materem
+$('nav a').click(function(event) {
+  var id = $(this).attr("href");
+  var offset = 70;
+  var target = $(id).offset().top - offset;
+  $('html, body').animate({
+      scrollTop: target
+  }, 500);
+  event.preventDefault();
+});
 </script>
 
 </body>

@@ -9,9 +9,28 @@ h1 {
 }
 
 .odsazeni{
-  margin: 100 0 100 0 ;
+  margin: 50 0 50 0 ;
 }
 
+.content-naspis{
+  padding: 50px;
+}
+
+.h11{
+  margin: 0 ;
+
+  padding: 0 ;
+  font-size: 2em ;
+  color: #000000;
+
+}
+
+.p11{
+  margin: 20px 0 0;
+  padding: 0;
+  font-size: 1.1em;
+}
+/*
 
 .navbaros1 {
   position: fixed;
@@ -88,24 +107,9 @@ h1 {
   background-repeat: no-repeat;
 }
 
-.content{
-  padding: 50px;
-}
 
-.h11{
-  margin: 0 ;
 
-  padding: 0 ;
-  font-size: 2em ;
-  color: #000000;
 
-}
-
-.p11{
-  margin: 20px 0 0;
-  padding: 0;
-  font-size: 1.1em;
-}
 
 .black{
   background: rgba(0,0,0,.8) !important;
@@ -200,4 +204,4 @@ nav.black ul li a{
     line-height: 30px !important;
     color: #fff;
   }
-}
+} */

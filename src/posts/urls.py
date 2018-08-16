@@ -17,7 +17,7 @@ urlpatterns = [
 	url(r'^prices/$',views.PricesView.as_view(),name='prices'),
 	url(r'^services/$',views.ServicesView.as_view(),name='services'),
 	url(r'^team/$',views.TeamView.as_view(),name='team'),
-    url(r'^create/$', post_create),
+    url(r'^create/$', post_create, name='create'),
     url(r'^(?P<slug>[\w-]+)/$', post_detail, name='detail'),
     url(r'^(?P<slug>[\w-]+)/edit/$', post_update, name='update'),
     url(r'^(?P<slug>[\w-]+)/delete/$', post_delete),
