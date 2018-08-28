@@ -36,3 +36,8 @@ apt-cache show python3-pil
 ￼<22:44:28> "Wasmanni": cesta /home/pi/3Dprint/src
 
 ssh -p 20022 kubasek@89.102.14.70
+
+vytvoreni ssh klice : https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-1804
+
+ssh-keygen -b 4096
+ssh-copy-id -p 20022 kubasek@89.102.14.70

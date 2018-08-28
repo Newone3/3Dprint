@@ -25,7 +25,7 @@ SECRET_KEY = 'sm@g)(fbwdh5wc*xe@j++m9rh^uza5se9a57c5ptwkg*b@ki0x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['newone.pythonanywhere.com','127.0.0.1','localhost',"192.168.2.115","89.102.14.70",]
+ALLOWED_HOSTS = ['127.0.0.1','localhost',"192.168.2.115","89.102.26.61",]
 
 CORS_REPLACE_HTTPS_REFERER      = True
 HOST_SCHEME                     = "https://"

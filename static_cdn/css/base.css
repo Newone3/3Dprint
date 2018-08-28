@@ -8,6 +8,29 @@ h1 {
     margin-left: 0px !important;
 }
 
+.odsazeni{
+  margin: 50 0 50 0 ;
+}
+
+.content-naspis{
+  padding: 50px;
+}
+
+.h11{
+  margin: 0 ;
+
+  padding: 0 ;
+  font-size: 2em ;
+  color: #000000;
+
+}
+
+.p11{
+  margin: 20px 0 0;
+  padding: 0;
+  font-size: 1.1em;
+}
+/*
 
 .navbaros1 {
   position: fixed;
@@ -18,7 +41,7 @@ h1 {
   padding: 10px 100px;
   box-sizing: border-box;
   transition: .5s;
-  z-index: 9;
+  z-index: 3;
 }
 
 .logo {
@@ -26,7 +49,8 @@ h1 {
 }
 
 .imgur {
-  height: 90px;
+  height: 70px;
+  width: 70px;
   transition: .5s;
 
 }
@@ -44,7 +68,7 @@ h1 {
 
 .aos {
   line-height: 80px;
-  color: #262626;
+  color: #474646;
   padding: 5px 20px;
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
@@ -59,14 +83,11 @@ h1 {
   text-decoration: none;
 
 }
-
-
-.active{
-  color: #fff;
-  background: #f00;
-  text-decoration: none;
-
+.redcol{
+  background: red;
 }
+
+
 
 .sec1{
   width: 100%;
@@ -86,35 +107,101 @@ h1 {
   background-repeat: no-repeat;
 }
 
-.content{
-  padding: 50px;
-}
 
-.h11{
-  margin: 0 ;
-  padding: 0 ;
-  font-size: 2em ;
-  color: #000000;
 
-}
 
-.p11{
-  margin: 20px 0 0;
-  padding: 0;
-  font-size: 1.1em;
-}
 
 .black{
   background: rgba(0,0,0,.8) !important;
-  height: 110px;
+  height: 60px;
   padding: 10px 50px;
 }
 
 nav.black .logo img{
-  height: 80px;
+  height: 40px;
+  width: 40px;
 }
 
 nav.black ul li a{
   color: #fff;
-  line-height: 90px;
+  line-height: 40px;
 }
+
+.responsive-bar{
+  display: none;
+}
+@media (max-width: 768px)
+{
+  .active{
+    color: #fff;
+    background: #f00;
+    text-decoration: none;
+
+  }
+  .responsive-bar
+  {
+    display: block;
+    width: 100%;
+    height: 60px;
+    background: #262626;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    z-index: 4;
+  }
+  .responsive-bar .logo img
+  {
+    float: left;
+    height: 50px;
+
+  }
+  .responsive-bar .menu h4
+  {
+    float: right;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .navbaros1,
+  nav.black
+  {
+    background: #262626;
+    height: 60px;
+    padding: 0;
+  }
+  nav .logo{
+    display: none;
+  }
+  .ulos
+  {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    background: #262626;
+    float: none;
+    display: none;
+  }
+  nav ul.active
+  {
+    display: block;
+  }
+  .lios
+  {
+    width: 100%;
+  }
+  .aos
+  {
+    display: block;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 30px !important;
+    color: #fff;
+  }
+} */
