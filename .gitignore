@@ -62,6 +62,3 @@ docs/_build/
 target/
 
 #databaze
-src/db.sqlite3
-db.sqlite3
-*.sqlite.3
