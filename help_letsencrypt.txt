@@ -1,0 +1,10 @@
+kubasek@rpi-devel:~/web/3Dprint/src $ git clone https://github.com/letsencrypt/letsencrypt
+
+cd letsencrypt/
+
+ ./letsencrypt-auto --help   //zadat password uzivatele
+
+ service nginx stop  // je potreba root
+
+ ./letsencrypt-auto certonly --standalone --email jakub.blaha1@seznam.cz -d
+3dprinted.cz

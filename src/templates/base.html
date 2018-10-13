@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{% block head_title %}3D Tisk{% endblock head_title %}</title>
+<title>{% block head_title %}3DPrinted.cz - 3D tisk libovolných součástí na zakázku{% endblock head_title %}</title>
 <!-- Latest compiled and minified CSS -->
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -41,11 +41,15 @@
 </head>
 <body>
 
+<header>
 
-  <header class="main_h">
+
+  <div class="main_h">
+
+
 
   <div class="row">
-      <a class="logo" href="#">EVIL Corp</a>
+      <a class="logo" href="{% url "posts:list" %}">EVIL Corp</a>
 
       <div class="mobile-toggle">
           <span></span>
@@ -72,15 +76,15 @@
 
   </div> <!-- / row -->
 
+
+</div>
   </header>
 
   <div class="hero">
 
   <h1><span>EVIL Corp</span><br>3D Printing</h1>
 
-  <div class="mouse">
-      <span></span>
-  </div>
+
 
   </div>
 

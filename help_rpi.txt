@@ -37,7 +37,19 @@ apt-cache show python3-pil
 
 ssh -p 20022 kubasek@89.102.14.70
 
+//killovani procesu
+kubasek@rpi-devel:~/web/3Dprint/src $ ps aux | grep pyth
+kubasek   3805  0.0  2.3  27652 22184 ?        S    01:57   0:01 python3 manage.py runsslserver --certificate /home/kubasek/ssl_cert/fullchain2.pem --key /home/kubasek/ssl_cert/privkey2.pem 0.0.0.0:9000
+kubasek   3807  9.0  2.8  41080 26880 ?        S    01:57  37:16 /usr/bin/python3 manage.py runsslserver --certificate /home/kubasek/ssl_cert/fullchain2.pem --key /home/kubasek/ssl_cert/privkey2.pem 0.0.0.0:9000
+kubasek  10393  0.0  0.0   4344   560 pts/1    S+   08:48   0:00 grep --color=auto pyth
+kubasek@rpi-devel:~/web/3Dprint/src $ kill -9 3805
+kubasek@rpi-devel:~/web/3Dprint/src $ kill -9 3807
+
+
 vytvoreni ssh klice : https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-1804
 
 ssh-keygen -b 4096
 ssh-copy-id -p 20022 kubasek@89.102.14.70
+
+
+python3 manage.py runsslserver --certificate ~/ssl_cert/fullchain2.pem --key ~/ssl_cert/privkey2.pem 0.0.0.0:9000

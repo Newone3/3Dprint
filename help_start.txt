@@ -56,3 +56,18 @@ conda create --name myclone --clone myenv
 NOTE: Replace myclone with the name of the new environment. Replace myenv with the name of the existing environment that you want to copy.
 
 conda info --envs
+
+kill procesu!!!
+
+kubasek@rpi-devel:~ $ ps aux | grep pyth
+kubasek   9006  0.5  2.3  27660 22132 pts/1    S+   20:02   0:01 python3 manage.py runsslserver --certificate /home/kubasek/ssl_cert/fullchain2.pem --key /home/kubasek/ssl_cert/privkey2.pem 0.0.0.0:9000
+kubasek   9008  9.6  2.7  41064 26548 pts/1    Sl+  20:02   0:26 /usr/bin/python3 manage.py runsslserver --certificate /home/kubasek/ssl_cert/fullchain2.pem --key /home/kubasek/ssl_cert/privkey2.pem 0.0.0.0:9000
+
+kill -9 9006
+
+dulezitee zapnuti serveru!!!
+
+ssh -p 20022 kubasek@89.102.26.61
+
+
+kubasek@rpi-devel:~/web/3Dprint/src $ python3 manage.py runsslserver --certificate /home/kubasek/ssl_cert/fullchain2.pem --key /home/kubasek/ssl_cert/privkey2.pem 0.0.0.0:9000 &

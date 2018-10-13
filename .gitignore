@@ -61,4 +61,7 @@ docs/_build/
 # PyBuilder
 target/
 
-#databaze
+# Database stuff
+*.sqlite3
+migrations/
+db.sqlite3
