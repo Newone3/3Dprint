@@ -53,3 +53,9 @@ ssh-copy-id -p 20022 kubasek@89.102.14.70
 
 
 python3 manage.py runsslserver --certificate ~/ssl_cert/fullchain2.pem --key ~/ssl_cert/privkey2.pem 0.0.0.0:9000
+
+
+ssh -p 20022 kubasek@89.102.26.61
+
+
+kubasek@rpi-devel:~/web/3Dprint/src $ python3 manage.py runsslserver --certificate /home/kubasek/ssl_cert/fullchain2.pem --key /home/kubasek/ssl_cert/privkey2.pem 0.0.0.0:9000 &
