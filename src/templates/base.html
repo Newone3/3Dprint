@@ -60,14 +60,15 @@
       <nav>
           <ul>
 
-              <li><a href="{% url "posts:list" %}">NEWS</a></li>
+              <li><a href="{% url "posts:list" %}">Novinky</a></li>
               <li><a href="{% url "posts:about" %}">O nás</a></li>
               <li><a href="{% url "posts:services" %}">Služby</a></li>
               <li><a href=".footer">Kontakty</a></li>
               {% if not request.user.is_authenticated %}
               <li><a href="{% url "login" %}">Login</a></li>
-              <li><a href="{% url "register" %}">Register</a></li>
+
               {% else %}
+              <li><a href="{% url "register" %}">Register</a></li>
               <li><a href="{% url "posts:create" %}">New Post</a></li>
               <li><a href="{% url "logout" %}">Logout</a></li>
               {% endif %}
@@ -82,7 +83,7 @@
 
   <div class="hero">
 
-  <h1><span>EVIL Corp</span><br>3D Printing</h1>
+  <h1><span>EVIL Corp</span><br>3D SOLUTIONS</h1>
 
 
 
@@ -155,16 +156,15 @@ fjs.parentNode.insertBefore(js, fjs);
 
         <div class="footer-left">
 
-          <h3>Evil<span>Corp</span></h3>
+          <h3>3D <span>SOLUTIONS</span></h3>
 
           <p class="footer-links">
-            <a href="{% url "posts:list" %}">Home</a>
+            <a href="{% url "posts:list" %}">Novinky</a>
             ·
-            <a href="{% url "posts:services" %}">Pricing</a>
+            <a href="{% url "posts:services" %}">Ceník</a>
             ·
-            <a href="{% url "posts:about" %}">About</a>
-            ·
-            <a href="{% url "posts:contact" %}">Contact</a>
+            <a href="{% url "posts:about" %}">O nás</a>
+
           </p>
 
 
@@ -184,7 +184,7 @@ fjs.parentNode.insertBefore(js, fjs);
 
           <div>
             <i class="fa fa-envelope"></i>
-            <p><a href="mailto:support@evilcorp.com">support@evilcorp.com</a></p>
+            <p><a href="mailto:support@evilcorp.com">3Dsolutions@info.cz</a></p>
           </div>
 
         </div>
@@ -192,9 +192,10 @@ fjs.parentNode.insertBefore(js, fjs);
         <div class="footer-right">
 
           <p class="footer-company-about">
-            <span>About the company</span>
-            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
-          </p>
+            <span>O naší společnosti</span>
+            Co se stane, když se sejde Strojař, Programátor a Mechatronik? <br><br>
+
+            My tomu říkáme <strong>3D SOLUTIONS</strong>.</p>
 
 
 
@@ -212,7 +213,7 @@ fjs.parentNode.insertBefore(js, fjs);
         <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
     </div>
     <div class="footer-copyright">
-        <p>Evil Corp &copy; 2018</p>
+        <p>MBM - 3D SOLUTIONS &copy; 2018</p>
     </div>
 </footer>
 
