@@ -32,7 +32,7 @@ urlpatterns = [
     url(r'^robots\.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: ", mimetype="text/plain")),
     url(r'^', include("posts.urls", namespace='posts')),
 
-
+]
 
 
 if settings.DEBUG:

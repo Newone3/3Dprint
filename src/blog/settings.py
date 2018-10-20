@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'markdown_deux',
     'pagedown',
     'sslserver',
-    
+
     # local apps
     'posts',
 
