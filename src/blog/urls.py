@@ -28,9 +28,10 @@ urlpatterns = [
     url(r'^login/',login_view,name='login'),
     url(r'^logout/',logout_view,name='logout'),
     url(r'^register/',register_view,name='register'),
-    url(r'^', include("posts.urls", namespace='posts')),
     url(r'^googleb14bf86239c6b119\.html$', lambda r: HttpResponse("google-site-verification: googleb14bf86239c6b119.html", mimetype="text/plain")),
     url(r'^robots\.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: ", mimetype="text/plain")),
+    url(r'^', include("posts.urls", namespace='posts')),
+
 
 
 
